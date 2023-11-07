@@ -13,7 +13,7 @@
       </q-toolbar>
 
       <q-tabs align="left">
-        <q-route-tab to="/one" label="Page One" />
+        <q-route-tab to="/login" label="Login" />
         <q-route-tab to="/two" label="Page Two" />
         <q-route-tab to="/three" label="Page Three" />
       </q-tabs>

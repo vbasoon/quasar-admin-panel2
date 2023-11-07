@@ -1,11 +1,24 @@
 <template>
-  <q-page class="flex flex-center"> <h1>One Page</h1> </q-page>
+  <q-page class="flex flex-center column">
+    <h1>One Page</h1>
+    <input type="text" v-model="myVar" />
+    <pre>Output: {{ myVar }}</pre>
+    <pre>{{ computedName }}</pre>
+
+    <q-btn @click="changeMyOption"> Change! </q-btn>
+  </q-page>
 </template>
 
-<script>
-import { defineComponent } from "vue";
+<script setup>
+import { ref, computed } from "vue";
 
-export default defineComponent({
-  name: "OnePage",
+const myVar = ref("");
+
+const computedName = computed(() => {
+  return myVar.value + " more more more...!";
 });
+
+function changeMyOption() {
+  myVar.value = "Dark" + myVar.value;
+}
 </script>

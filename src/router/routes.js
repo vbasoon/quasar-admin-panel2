@@ -8,8 +8,8 @@ const routes = [
         component: () => import("pages/IndexPage.vue"),
       },
       {
-        path: "one",
-        component: () => import("pages/OnePage.vue"),
+        path: "login",
+        component: () => import("pages/LoginPage.vue"),
       },
       {
         path: "two",

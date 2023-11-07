@@ -7,7 +7,13 @@
 <script>
 import { defineComponent, ref } from "vue";
 
-export default defineComponent({
+export default {
   name: "ThreePage",
-});
+  setup() {
+    const myMessage = ref("My reactive message");
+    return {
+      myMessage,
+    };
+  },
+};
 </script>
