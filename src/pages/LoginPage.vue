@@ -5,10 +5,20 @@
         Login
       </q-card-section>
       <q-card-section>
-        <q-input filled label="Name" class="q-mb-md" />
-        <q-input filled label="Password" type="password" />
+        <q-input filled label="Name" class="q-mb-md" v-model="form.email" />
+        <q-input
+          filled
+          label="Password"
+          type="password"
+          v-model="form.password"
+        />
       </q-card-section>
-      <q-btn class="full-width" label="Login" color="primary"></q-btn>
+      <q-btn
+        class="full-width"
+        label="Login"
+        color="primary"
+        @click="login"
+      ></q-btn>
     </q-card>
   </q-page>
 </template>
@@ -19,4 +29,10 @@ const form = ref({
   email: "",
   password: "",
 });
+
+function login() {
+  console.log(form.value);
+  // axios.post("/login");
+  // form.value;
+}
 </script>
