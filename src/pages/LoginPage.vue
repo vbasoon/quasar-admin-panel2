@@ -1,10 +1,22 @@
 <template>
-  <q-page flex flex-center padding>
-    <h1>Login Page</h1>
-    <q-card class="full-width" style="max-width: 450px">
-      <q-card-section class="text-center"> Login </q-card-section>
+  <q-page class="flex flex-center" padding>
+    <q-card class="full-width" style="max-width: 400px">
+      <q-card-section style="font-size: 1.3em" class="text-center">
+        Login
+      </q-card-section>
+      <q-card-section>
+        <q-input filled label="Name" class="q-mb-md" />
+        <q-input filled label="Password" type="password" />
+      </q-card-section>
+      <q-btn class="full-width" label="Login" color="primary"></q-btn>
     </q-card>
   </q-page>
 </template>
 
-<script setup></script>
+<script setup>
+import { ref } from "vue";
+const form = ref({
+  email: "",
+  password: "",
+});
+</script>
